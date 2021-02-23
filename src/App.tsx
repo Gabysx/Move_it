@@ -6,8 +6,6 @@ function App() {
     <div className="container">
       <ExperienceBar />
     </div>
-    
-    
   );
 }
 
