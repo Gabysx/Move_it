@@ -1,4 +1,5 @@
-import styles from '../styles/components/CompletedChallenges.module.css'
+import styles from '../styles/components/Challenges.module.css'
+
 
 export function CompletedChallenges() {
     return (
