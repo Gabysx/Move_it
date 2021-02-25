@@ -1,9 +1,9 @@
-.challengeBoxContainer {
+.container{
     height: 100%;
 
     background: var(--white);
     border-radius: 5px;
-    box-shadow: 0 0 60px (0, 0, 0, 0.05);
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
     padding: 1.5rem 2rem;
 
     display: flex;
@@ -14,19 +14,19 @@
     text-align: center;
 }
 
-.challengeNotActive {
+.not{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.challengeNotActive strong {
+.not strong{
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.4;
 }
 
-.challengeNotActive p {
+.not p{
     display: flex;
     flex-direction: column;
     align-items: center;
