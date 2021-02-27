@@ -1,29 +1,47 @@
 import { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
+import { CountdownContext } from '../contexts/CountdownContext';
 import styles from '../styles/components/ChallengesBox.module.css';
 
 export function BoxChallenges() {
 
-    const ContextData = useContext(ChallengesContext);
+    const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContext);
+    const { resetCountdown} = useContext(CountdownContext);
 
-    const hasActiveChallenge = true;
+
+    function handleChallengeSucceeded() {
+        completeChallenge();
+        resetCountdown();
+
+    }
+
+    function handleChallengeFail(){
+        resetCountdown();
+
+    }
 
     return (
         <div className={styles.challengeBoxContainer}>
-            { hasActiveChallenge ? (
+            { activeChallenge ? (
                 <div className={styles.challengeActive}>
-                    <header>Ganhe 400 xp</header>
+                    <header>Ganhe  {activeChallenge.amount} xp</header>
 
-                    <main>
+                    <main>{activeChallenge.type === 'body'? (
                         <img src="icons/body.svg" />
+
+                    ):(
+                        <img src="icons/eye.svg" />
+                    )}
+                        
                         <strong>Novo desafio</strong>
-                        <p>Bora caminhar 3 min</p>
+                        <p>{activeChallenge.description}</p>
                     </main>
 
                     <footer>
                         <button 
                             type="button"
                             className={styles.challengeFailButton}
+                            onClick={handleChallengeFail}
                         > 
                             Falhei
                         
@@ -31,6 +49,7 @@ export function BoxChallenges() {
                         <button 
                             type="button"
                             className={styles.challengeSucceededButton}
+                            onClick={handleChallengeSucceeded}
                         > 
                             Completei
                         </button>

@@ -9,8 +9,8 @@ import { BoxChallenges } from "../components/BoxChallenges";
 
 
 import styles from '../styles/pages/Home.module.css';
-
-
+import React from 'react';
+import { CountdownProvider } from '../contexts/CountdownContext';
 
 
 export default function Home() {
@@ -23,17 +23,18 @@ export default function Home() {
       <ExperienceBar />
 
       <section>
+        <CountdownProvider>
+          <div>
+            <Profile />
+            <CompletedChallenges />
+            <Countdown />
+          </div>
+          <div>
 
-        <div>
-          <Profile />
-          <CompletedChallenges />
-          <Countdown />
-        </div>
-        <div>
+            <BoxChallenges />
 
-          <BoxChallenges />
-         
-        </div>
+          </div>
+        </CountdownProvider>
       </section>
     </div>
   )
