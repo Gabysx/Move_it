@@ -1,5 +1,6 @@
+
 import { createContext, ReactNode, useEffect, useState } from 'react';
-import Cookies from 'js-cookie';
+
 
 import challenges from  '../../challenges.json';
 
@@ -43,9 +44,6 @@ export function ChallengesProvider({children}: ChallengesProviderProps) {
   },[])
 
   useEffect(() => {
-    Cookies.set('level', String(level));
-    Cookies.set('currentExpperience', String(currentExperience));
-    Cookies.set('challengesCompleted', String(challengesCompleted));
 
   }, [level, currentExperience, challengesCompleted])
 
