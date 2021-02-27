@@ -4,9 +4,9 @@ export function Profile() {
     return (
         <div className={styles.profileContainer}>
             <img src="https://github.com/gabysx.png" alt="Gabys"/>
-           <div className={styles.strong}>
-               <strong>Gabys </strong>
-               <p>
+           <div>
+               <strong> Gabys </strong>
+                <p>
                    <img src="icons/level.svg" alt="Level"/>
                    Level 1
                 </p>
