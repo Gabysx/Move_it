@@ -8,6 +8,8 @@ export function ExperienceBar() {
 
   const percentToNextLevel = (currentExperience * 100) / experienceToNextLevel;
 
+ 
+
 
   return (
     <header className={styles.experienceBar}>
@@ -17,8 +19,11 @@ export function ExperienceBar() {
         <span className={styles.currentExperience} style={{ left:`${percentToNextLevel}%` }}>
           {currentExperience} xp
         </span>
+
       </div>
-      <span>{experienceToNextLevel} xp</span>
+      swi
+
+      <span role="checkbox"></span>
     </header>
   );
 }
