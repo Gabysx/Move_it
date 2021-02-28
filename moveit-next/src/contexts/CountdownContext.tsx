@@ -50,6 +50,7 @@ export function  CountdownProvider({ children }: CountdownProviderProps) {
         setIsActive(true);
     
       }
+      
       function resetCountdown() {
         clearTimeout(countdownTimeout)
         setIsActive(false);

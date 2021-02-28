@@ -21,9 +21,7 @@ export function ExperienceBar() {
         </span>
 
       </div>
-      swi
-
-      <span role="checkbox"></span>
+      {experienceToNextLevel}xp
     </header>
   );
 }

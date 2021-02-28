@@ -1,20 +1,25 @@
-import { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
+import Switch from 'react-switch';
 import styles from '../styles/components/Profile.module.css';
+
+
 
 export function Profile() {
 
-        const { level } = useContext(ChallengesContext);
+    const { level } = useContext(ChallengesContext);
+ 
 
     return (
         <div className={styles.profileContainer}>
+
             <img src="https://github.com/gabysx.png" alt="Gabys"/>
            <div>
                <strong> Gabys </strong>
                 <p>
                    <img src="icons/level.svg" alt="Level"/>
                    Level {level}
-                </p>
+                </p>     
            </div>
         </div>
     );

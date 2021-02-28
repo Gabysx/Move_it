@@ -4,6 +4,21 @@
   box-sizing: border-box;
 }
 
+.theme_dark {
+  --dark: #2f2e2e;
+  --background:#2f2e2e;
+  --gray-line: #dcdde0;
+  --text: #E8E8E8;
+  --text-highlight: #b3b9ff;
+  --title: #fff;
+  --red: #e83f5b;
+  --green: #4cd62b;
+  --blue:#5965E0;
+  --blue-dark:#4953B8;
+  --blue-twitter: #2aa9e0;
+}
+
+
 :root {
   --white:#fff;
   --background: #f2f3f5;

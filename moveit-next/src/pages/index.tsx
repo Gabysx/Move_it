@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
-import Cookies from 'js-cookie';
 
 import { CompletedChallenges } from "../components/CompletedChallenges";
 import { Countdown } from "../components/Countdown";
@@ -24,34 +23,36 @@ interface HomeProps {
 
 export default function Home(props) {
   return (
-    <ChallengesProvider 
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-      > 
-    <div className={styles.container}>
-      <Head>
-        <title>Start | Move.it</title>
-      </Head>
 
-      <ExperienceBar />
+      <ChallengesProvider 
+        level={props.level}
+        currentExperience={props.currentExperience}
+        challengesCompleted={props.challengesCompleted}
+        > 
+      <div className={styles.container}>
+        <Head>
+          <title>Start | Move.it</title>
+        </Head>
 
-      <section>
-        <CountdownProvider>
-          <div>
-            <Profile />
-            <CompletedChallenges />
-            <Countdown />
-          </div>
-          <div>
+        <ExperienceBar />
 
-            <BoxChallenges />
+        <section>
+          <CountdownProvider>
+            <div>
+              <Profile />
+              <CompletedChallenges />
+              <Countdown />
+            </div>
+            <div>
 
-          </div>
-        </CountdownProvider>
-      </section>
-    </div>
-    </ChallengesProvider>
+              <BoxChallenges />
+
+            </div>
+          </CountdownProvider>
+        </section>
+      </div>
+      </ChallengesProvider>
+
   )
 }
 
