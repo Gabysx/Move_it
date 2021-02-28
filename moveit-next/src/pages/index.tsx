@@ -16,14 +16,14 @@ interface HomeProps {
   level: number;
   currentExperience: number;
   challengesCompleted: number;
-
 }
 
 
 export default function Home(props) {
-  return (
+  
+  return (  
 
-      <ChallengesProvider 
+    <ChallengesProvider 
         level={props.level}
         currentExperience={props.currentExperience}
         challengesCompleted={props.challengesCompleted}
@@ -50,8 +50,7 @@ export default function Home(props) {
           </CountdownProvider>
         </section>
       </div>
-      </ChallengesProvider>
-
+    </ChallengesProvider>
   )
 }
 
