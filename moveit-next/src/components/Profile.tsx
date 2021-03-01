@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
-import Switch from 'react-switch';
+
 import styles from '../styles/components/Profile.module.css';
 
 
