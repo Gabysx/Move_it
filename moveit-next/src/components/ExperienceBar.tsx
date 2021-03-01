@@ -23,12 +23,6 @@ export function ExperienceBar() {
 
       </div>
       {experienceToNextLevel}xp
-      <Switch
-      
-
-      >
-
-      </Switch>
     </header>
   );
 }
